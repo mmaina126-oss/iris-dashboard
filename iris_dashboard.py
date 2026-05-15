@@ -30,3 +30,7 @@ st.write("### Bar Chart")
 st.bar_chart(
     df[["sepal length (cm)", "sepal width (cm)", "petal length (cm)", "petal width (cm)"]]
 )
+st.write("### Line Chart")
+st.line_chart(
+    df[["petal length (cm)", "petal width (cm)"]]
+)
