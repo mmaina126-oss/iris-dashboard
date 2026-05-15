@@ -24,3 +24,8 @@ st.scatter_chart(
     x="sepal length (cm)",
     y="sepal width (cm)"
 )
+st.write("### Bar Chart")
+
+st.bar_chart(
+    filtered_df[["sepal length (cm)", "sepal width (cm)", "petal length (cm)", "petal width (cm)"]]
+)
