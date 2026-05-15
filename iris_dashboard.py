@@ -17,3 +17,10 @@ df["species"] = pd.Categorical.from_codes(
 )
 
 st.write(df)
+st.write("### Scatter Plot")
+
+st.scatter_chart(
+    filtered_df,
+    x="sepal length (cm)",
+    y="sepal width (cm)"
+)
