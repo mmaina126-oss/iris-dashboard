@@ -47,3 +47,19 @@ st.bar_chart(species_count)
 st.write("### Summary Statistics")
 
 st.write(df.describe())
+if st.checkbox("Show Raw Data"):
+    st.dataframe(df)
+sepal_length = st.slider(
+    "Select Minimum Sepal Length",
+    float(df["sepal length (cm)"].min()),
+    float(df["sepal length (cm)"].max())
+)
+
+filtered_data = df[df["sepal length (cm)"] >= sepal_length]
+
+st.write(filtered_data)
+st.metric("Total Flowers", len(df))
+st.metric("Number of Features", len(df.columns))
+st.sidebar.title("Iris Dashboard Menu")
+
+st.sidebar.write("Use this menu to explore the dashboard.")
