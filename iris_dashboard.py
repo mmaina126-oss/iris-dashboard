@@ -34,3 +34,16 @@ st.write("### Line Chart")
 st.line_chart(
     df[["petal length (cm)", "petal width (cm)"]]
 )
+st.write("### Area Chart")
+
+st.area_chart(
+    df[["petal length (cm)", "petal width (cm)"]]
+)
+st.write("### Species Distribution")
+
+species_count = df["species"].value_counts()
+
+st.bar_chart(species_count)
+st.write("### Summary Statistics")
+
+st.write(df.describe())
