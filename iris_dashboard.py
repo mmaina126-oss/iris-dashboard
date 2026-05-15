@@ -16,16 +16,15 @@ df["species"] = pd.Categorical.from_codes(
     iris.target_names
 )
 
-st.write(df)
 st.write("### Scatter Plot")
 
 st.scatter_chart(
-    filtered_df,
+    df,
     x="sepal length (cm)",
     y="sepal width (cm)"
 )
 st.write("### Bar Chart")
 
 st.bar_chart(
-    filtered_df[["sepal length (cm)", "sepal width (cm)", "petal length (cm)", "petal width (cm)"]]
+    df[["sepal length (cm)", "sepal width (cm)", "petal length (cm)", "petal width (cm)"]]
 )
